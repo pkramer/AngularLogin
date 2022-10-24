@@ -1,0 +1,20 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-accordion fxFlex="500px" fxFlex.xs="100%">
+        <mat-expansion-panel *ngFor="let subject of subjects; let i = index">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{i+1}}. Subject
+            </mat-panel-title>
+            <mat-panel-description>
+              Subject Information
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <div fxLayout="row wrap" fxLayoutAlign="center center">
+            <div fxFlex="35%" class="text-color"><strong>type:</strong> &nbsp; {{subject?.accountType}}</div>
+            <div fxFlex class="text-color"><strong>created:</strong> &nbsp; {{subject?.dateCreated | date}}</div>
+          </div>
+ 
+        </mat-expansion-panel>
+      </mat-accordion>
+</section>

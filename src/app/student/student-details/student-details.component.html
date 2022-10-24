@@ -1,0 +1,2 @@
+<app-student-data [student]='student' (selectEmitt)='showSubjects = $event'></app-student-data>
+<app-subject-data *ngIf='showSubjects' [subjects]='student.subjects'></app-subject-data>
