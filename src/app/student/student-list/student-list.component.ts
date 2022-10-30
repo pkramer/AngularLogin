@@ -27,7 +27,7 @@ export class StudentListComponent implements OnInit, AfterViewInit {
   }
  
   public getAllStudents = () => {
-    this.repoService.getData('api/student')
+    this.repoService.getData('api/students')
     .subscribe(res => {
       this.dataSource.data = res as Student[];
     },
